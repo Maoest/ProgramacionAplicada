@@ -19,8 +19,27 @@ def f_contar(s_num): # se inicia la función, esta debe tener un parametro que s
 
 print(f_contar(1))
 
-# TODO: modificar esta función para que imprima todos los valores de manera ordenada
+# TODO: modificar esta función para que imprima todos los valores de manera ordenada 
+def f_contar(s_num): # se inicia la función, esta debe tener un parametro que sirva como memoria del sistema
+    if s_num < 10: # si el número actual es menor que 10, aumentar en uno y volver a correr la función
+        print(s_num)
+        s_num+=1
+        return f_contar(s_num) # al correr nuevamente la función, ingresa con s_num + 1 como parametro por lo que cada vez incrementa
+    else:
+        return s_num # finalmetne cuando se cumple la condición se retorna el valor final
+
+print(f_contar(1))
+
 # TODO: modificar la función para que reciba dos parametros, el número inicial y el objetivo
+def f_contar(s_num,f_num): # se inicia la función, esta debe tener un parametro que sirva como memoria del sistema
+    if s_num < f_num: # si el número actual es menor que 10, aumentar en uno y volver a correr la función
+        s_num+=1
+        return f_contar(s_num,f_num) # al correr nuevamente la función, ingresa con s_num + 1 como parametro por lo que cada vez incrementa
+    else:
+        return s_num # finalmetne cuando se cumple la condición se retorna el valor final
+
+print(f_contar(1,10))
+
 # TODO: modificar la función para que reciba 3 parametros el número inicial, el objetivo y los pasos entre números
 
 def f_contar(s_num,f_num,p_num): # se inicia la función, esta tiene 3 parametros que sirven como memoria del sistema
@@ -31,8 +50,26 @@ def f_contar(s_num,f_num,p_num): # se inicia la función, esta tiene 3 parametro
     else:
         return s_num # finalmetne cuando se cumple la condición se retorna el valor final
 
-print(f_contar(1,10,2))
+print(f_contar(1,10,3))
 
+# TODO: modificar la funcion  para que revrsar los numeros
+def f_contar(s_num,f_num,p_num): # se inicia la función, esta tiene 3 parametros que sirven como memoria del sistema
+    if s_num < f_num: # si el número actual es menor que el objetivo, aumentar en numero de suma entre numeros indicado y volver a correr la función
+        print(s_num)
+        s_num+=p_num
+        return f_contar(s_num,f_num,p_num) # al correr nuevamente la función, ingresa con s_num + p_num como parametro por lo que cada vez incrementa
+    else:
+        return s_num # finalmetne cuando se cumple la condición se retorna el valor final
+print(f_contar(1,10,3))
+
+def f_contar(s_num,f_num,p_num): # se inicia la función, esta debe tener 3  parametros que sirvan como memoria del sistema
+    if s_num > f_num: # si el numero actual dado por el parametro es mayor que el numero dado por el otro parametro , entonces realiza el recorrido en la funcion
+        print(s_num)   
+        s_num-=p_num                  
+        return f_contar(s_num,f_num,p_num) # al correr nuevamente la función, ingresa con s_num + 1 como parametro por lo que cada vez incrementa
+    else:
+        return s_num # finalmetne cuando se cumple la condición se retorna el valor final
+print(f_contar(10,1,3))
 
 ## Torre de Hanoi
 '''
